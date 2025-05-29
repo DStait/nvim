@@ -94,5 +94,33 @@ return {
 		vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 		vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 		vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+
+		vim.keymap.set('n',
+			'<leader>ltg',
+			require('telescope.builtin').lsp_type_definitions,
+			{ desc = 'Go to Type Definition' }
+		)
+		vim.keymap.set(
+			'n',
+			'<leader>ltp',
+			function() require('telescope.builtin').lsp_type_definitions({ jump_type = "never" }) end,
+			{ desc = 'Preview Type Definition' }
+		)
+		vim.keymap.set('n',
+			'<leader>ldd',
+			require('telescope.builtin').lsp_definitions,
+			{ desc = 'Go to Definition' }
+		)
+		vim.keymap.set('n',
+			'<leader>ldp',
+			function() require('telescope.builtin').lsp_definitions({ jump_type = "never" }) end,
+			{ desc = 'Preview Definition' }
+		)
+		vim.keymap.set(
+			'n',
+			'<leader>sF',
+			function() require('telescope.builtin').find_files({ hidden = true }) end,
+			{ desc = '[S]earch hidden [F]iles' }
+		)
 	end,
 }
