@@ -37,6 +37,9 @@ return {
       shfmt = {
         prepend_args = { "-i", "2" },
       },
+      black = {
+        prepend_args = { "-l", "120" }
+      }
     },
   },
   init = function()
