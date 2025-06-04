@@ -10,6 +10,7 @@ return {
 			{ '<leader>g',  group = '[G]it' },
 			{ '<leader>x',  group = 'Trouble (Diagnostics)' },
 			{ '<leader>t',  group = '[T]oggle' },
+			{ '<leader>n',  group = '[N]ofitications' },
 			{ '<leader>v',  group = '[V]env' },
 			{ '<leader>h',  group = 'Git [H]unk',           mode = { 'n', 'v' } },
 		},

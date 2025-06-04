@@ -122,5 +122,14 @@ return {
 			function() require('telescope.builtin').find_files({ hidden = true }) end,
 			{ desc = '[S]earch hidden [F]iles' }
 		)
+
+
+		vim.keymap.set("n", "<leader>nl", function()
+			require("noice").cmd("last")
+		end, { desc = "[L]ast" })
+
+		vim.keymap.set("n", "<leader>nh", function()
+			require("noice").cmd("telescope")
+		end, { desc = "[H]istory" })
 	end,
 }
