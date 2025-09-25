@@ -15,6 +15,7 @@ return {
 				"lua_ls",
 				"pylsp",
 				"terraformls",
+				"jsonls"
 			}
 		}
 	end
