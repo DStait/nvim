@@ -50,3 +50,11 @@ vim.o.softtabstop = 4
 
 -- Number of spaces inserted when indenting
 vim.o.shiftwidth = 4
+
+
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldlevel = 99
+
+
+vim.api.nvim_set_keymap('n', 'q', 'q', { noremap = true, silent = true })
