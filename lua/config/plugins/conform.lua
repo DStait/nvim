@@ -38,7 +38,7 @@ return {
         prepend_args = { "-i", "2" },
       },
       black = {
-        prepend_args = { "-l", "120" }
+        prepend_args = { "-l", "88" }
       }
     },
   },

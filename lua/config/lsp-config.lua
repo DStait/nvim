@@ -3,7 +3,7 @@ vim.lsp.config('pylsp', {
 		pylsp = {
 			plugins = {
 				pycodestyle = {
-					maxLineLength = 120
+					maxLineLength = 88
 				}
 			}
 		}
