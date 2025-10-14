@@ -9,3 +9,6 @@ vim.api.nvim_create_user_command('Wq', 'wq', {})
 vim.api.nvim_create_user_command('W', 'w', {})
 vim.api.nvim_create_user_command('Qa', 'qa', {})
 vim.api.nvim_create_user_command('Q', 'q', {})
+
+vim.keymap.set('n', '<CR>j', 'm`o<Esc>``')
+vim.keymap.set('n', '<CR>k', 'm`O<Esc>``')
