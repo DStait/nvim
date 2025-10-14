@@ -8,7 +8,7 @@ vim.wo.number = true
 vim.o.relativenumber = true
 
 -- Enable mouse mode
-vim.o.mouse = ''
+vim.o.mouse = 'n'
 
 -- Sync clipboard between OS and Neovim.
 vim.o.clipboard = 'unnamedplus'
