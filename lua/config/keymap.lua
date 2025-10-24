@@ -12,3 +12,5 @@ vim.api.nvim_create_user_command('Q', 'q', {})
 
 vim.keymap.set('n', '<CR>j', 'm`o<Esc>``')
 vim.keymap.set('n', '<CR>k', 'm`O<Esc>``')
+
+vim.api.nvim_set_keymap('n', 'q', 'q', { noremap = true, silent = false })
