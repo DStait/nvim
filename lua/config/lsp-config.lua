@@ -5,6 +5,9 @@ vim.lsp.config('pylsp', {
 				pycodestyle = {
 					maxLineLength = 88
 				}
+			},
+			signature = {
+				formatter = "ruff"
 			}
 		}
 	}
