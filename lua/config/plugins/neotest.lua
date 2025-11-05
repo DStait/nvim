@@ -11,7 +11,10 @@ return {
 	config = function()
 		require("neotest").setup({
 			adapters = {
-				require("neotest-python")
+				require("neotest-python")({
+					dap = { justMyCode = false },
+					runner = "pytest",
+				})
 			},
 		})
 	end,

@@ -13,7 +13,7 @@ return {
 				"ansiblels",
 				"bashls",
 				"lua_ls",
-				"pylsp",
+				"basedpyright",
 				"terraformls",
 				"jsonls"
 			}

@@ -91,6 +91,13 @@ function M.setup_neotest_keymaps()
 			desc = "Terminate",
 		},
 		{
+			"<leader>tw",
+			function()
+				require("neotest").watch()
+			end,
+			desc = "Watch",
+		},
+		{
 			"<leader>td",
 			function()
 				vim.cmd("Neotree close")
