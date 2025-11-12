@@ -14,6 +14,7 @@ return {
 				"bashls",
 				"lua_ls",
 				"basedpyright",
+				"ruff",
 				"terraformls",
 				"jsonls"
 			}
