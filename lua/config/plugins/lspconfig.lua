@@ -5,6 +5,8 @@ return {
 		-- Automatically install LSPs to stdpath for neovim
 		{ 'williamboman/mason.nvim', config = true },
 		'williamboman/mason-lspconfig.nvim',
+		"rshkarin/mason-nvim-lint",
+		"mfussenegger/nvim-lint",
 	},
 	config = function()
 		require('mason').setup()
@@ -16,8 +18,15 @@ return {
 				"basedpyright",
 				"ruff",
 				"terraformls",
-				"jsonls"
+				"jsonls",
 			}
+		}
+
+		require("mason-nvim-lint").setup {
+			ensure_installed = {
+				"shellcheck"
+			},
+			automatic_installation = false
 		}
 	end
 }
