@@ -4,8 +4,6 @@ M = {}
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 
-vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
 vim.api.nvim_create_user_command('W', 'noa w', {})
 vim.api.nvim_create_user_command('Qa', 'qa', {})
 vim.api.nvim_create_user_command('Q', 'q', {})
@@ -145,6 +143,16 @@ function M.setup_harpoon_keymaps()
 			end,
 			desc = "Next entry"
 		},
+	}
+end
+
+function M.setup_oil_keymaps()
+	return {
+		{
+			"<leader>e",
+			"<CMD>Oil<CR>",
+			desc = "Open file explorer"
+		}
 	}
 end
 
