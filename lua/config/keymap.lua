@@ -172,7 +172,12 @@ function M.setup_telescope_keymaps()
 		{
 			"<leader><space>",
 			function()
-				require("telescope.builtin").git_files({ show_untracked = true })
+				local o = vim.system({ "git", "rev-parse", "--show-toplevel" }):wait()
+				if o.code == 0 then
+					require("telescope.builtin").git_files({ show_untracked = true })
+				else
+					require("telescope.builtin").find_files()
+				end
 			end,
 			desc = "Find Files"
 		},
