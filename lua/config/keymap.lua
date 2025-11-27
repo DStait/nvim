@@ -156,4 +156,15 @@ function M.setup_oil_keymaps()
 	}
 end
 
+function M.setup_browser_keymaps()
+	return {
+		{
+			"<leader>b",
+			":Browse input<CR>",
+			mode = { "n", "v" },
+			desc = "Search DDG"
+		}
+	}
+end
+
 return M

@@ -80,7 +80,6 @@ return {
 			-- If `false`, they are displayed in the order they were defined.
 			sort_results = true,
 		})
-
-		vim.keymap.set({ "n", "v" }, "<leader>B", ":Browse input<CR>", { desc = "Browser" })
-	end
+	end,
+	keys = require("config.keymap").setup_browser_keymaps()
 }
