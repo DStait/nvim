@@ -108,4 +108,44 @@ function M.setup_neotest_keymaps()
 	}
 end
 
+function M.setup_harpoon_keymaps()
+	return {
+		{
+			"<leader>a",
+			function()
+				require("harpoon"):list():add()
+			end,
+			desc = "Add to harpoon"
+		},
+		{
+			"<leader>A",
+			function()
+				require("harpoon"):list():clear()
+			end,
+			desc = "Remove from harpoon"
+		},
+		{
+			"<C-e>",
+			function()
+				require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
+			end,
+			desc = "Open harpoon menu"
+		},
+		{
+			"<C-k>",
+			function()
+				require("harpoon"):list():prev()
+			end,
+			desc = "Previous entry"
+		},
+		{
+			"<C-j>",
+			function()
+				require("harpoon"):list():next()
+			end,
+			desc = "Next entry"
+		},
+	}
+end
+
 return M
