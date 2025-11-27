@@ -167,4 +167,58 @@ function M.setup_browser_keymaps()
 	}
 end
 
+function M.setup_telescope_keymaps()
+	return {
+		{
+			"<leader><space>",
+			function()
+				require("telescope.builtin").git_files({ show_untracked = true })
+			end,
+			desc = "Find Files"
+		},
+		{
+			"<leader>i",
+			require("telescope.builtin").diagnostics,
+			desc = "Code Issues"
+		},
+		{
+			"<leader>s",
+			require("telescope.builtin").live_grep,
+			desc = "Search string"
+		},
+		{
+			"<leader>h",
+			require("telescope.builtin").help_tags,
+			desc = "Help"
+		},
+		{
+			"<leader>?",
+			require("telescope.builtin").oldfiles,
+			desc = "Recent files"
+		},
+		{
+			"<leader>n",
+			function()
+				require("noice").cmd("telescope")
+			end,
+			desc = "Notifications"
+		},
+		{
+			"<leader>gb",
+			require("telescope.builtin").git_branches,
+			desc = "git branches"
+		},
+		{
+			"<leader>gc",
+			require("telescope.builtin").git_commits,
+			desc = "git commits"
+		},
+		{
+			"<leader>gp",
+			require("telescope.builtin").git_bcommits,
+			desc = "git parent commits"
+		},
+	}
+end
+
 return M
