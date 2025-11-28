@@ -334,4 +334,34 @@ function M.setup_conform_keymaps()
 	}
 end
 
+function M.setup_trouble_keymaps()
+	return {
+		{
+			"<leader>cd",
+			"<cmd>Trouble diagnostics toggle<cr>",
+			desc = "Code Diagnostics",
+		},
+		{
+			"<leader>cs",
+			"<cmd>Trouble symbols toggle focus=false<cr>",
+			desc = "Symbols",
+		},
+		{
+			"<leader>cl",
+			"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+			desc = "LSP Definitions / references / ... "
+		},
+		{
+			"<leader>cL",
+			"<cmd>Trouble loclist toggle<cr>",
+			desc = "Location List",
+		},
+		{
+			"<leader>cQ",
+			"<cmd>Trouble qflist toggle<cr>",
+			desc = "Quickfix List",
+		},
+	}
+end
+
 return M
