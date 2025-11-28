@@ -1,3 +1,6 @@
+vim.o.splitright = true
+vim.o.splitbelow = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -37,7 +40,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Always show lines before bottom
-vim.o.scrolloff = 10
+vim.o.scrolloff = 20
 
 -- A TAB character looks like 4 spaces
 vim.o.tabstop = 4
