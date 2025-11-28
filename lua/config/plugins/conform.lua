@@ -2,17 +2,7 @@ return {
   "stevearc/conform.nvim",
   event = { "BufWritePre" },
   cmd = { "ConformInfo" },
-  keys = {
-    {
-      -- Customize or remove this keymap to your liking
-      "<leader>F",
-      function()
-        require("conform").format({ async = true })
-      end,
-      mode = "",
-      desc = "Format buffer",
-    },
-  },
+  keys = require("config.keymap").setup_conform_keymaps(),
   -- This will provide type hinting with LuaLS
   ---@module "conform"
   ---@type conform.setupOpts

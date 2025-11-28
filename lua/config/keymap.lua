@@ -320,4 +320,18 @@ function M.setup_venv_selector_keymap()
 	}
 end
 
+function M.setup_conform_keymaps()
+	return {
+		{
+			"<leader>f",
+			function()
+				require("conform").format({ async = true })
+			end,
+			mode = "",
+			desc = "Format buffer",
+		},
+
+	}
+end
+
 return M
