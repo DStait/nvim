@@ -290,4 +290,14 @@ function M.setup_dap_keymaps()
 	}
 end
 
+function M.setup_neogit_keymaps()
+	return {
+		{
+			"<leader>G",
+			"<cmd>Neogit<cr>",
+			desc = "Neogit UI"
+		}
+	}
+end
+
 return M
