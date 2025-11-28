@@ -194,7 +194,7 @@ function M.setup_telescope_keymaps()
 		{
 			"<leader>S",
 			require("telescope.builtin").spell_suggest,
-			desc = "Search string"
+			desc = "Spelling suggestions"
 		},
 		{
 			"<leader>h",
@@ -296,6 +296,16 @@ function M.setup_neogit_keymaps()
 			"<leader>G",
 			"<cmd>Neogit<cr>",
 			desc = "Neogit UI"
+		}
+	}
+end
+
+function M.setup_blame_keymaps()
+	return {
+		{
+			"<leader>gB",
+			"<cmd>BlameToggle virtual<cr>",
+			desc = "Blame Toggle"
 		}
 	}
 end
