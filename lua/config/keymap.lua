@@ -310,4 +310,14 @@ function M.setup_blame_keymaps()
 	}
 end
 
+function M.setup_venv_selector_keymap()
+	return {
+		{
+			"<leader>V",
+			"<cmd>VenvSelect<cr>",
+			{ desc = 'Venv Select' }
+		},
+	}
+end
+
 return M

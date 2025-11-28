@@ -6,10 +6,7 @@ return {
 		{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 	},
 	lazy = false,
-	keys = {
-		{ "<leader>vs", "<cmd>VenvSelect<cr>",       { desc = 'Venv Select' } },
-		{ '<leader>vc', '<cmd>VenvSelectCached<cr>', { desc = 'Venv Select Cached' } },
-	},
+	keys = require("config.keymap").setup_venv_selector_keymap(),
 	---@type venv-selector.Config
 	opts = {
 		pipenv_path = "~/.python-venvs/",
