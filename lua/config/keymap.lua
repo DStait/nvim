@@ -192,6 +192,11 @@ function M.setup_telescope_keymaps()
 			desc = "Search string"
 		},
 		{
+			"<leader>S",
+			require("telescope.builtin").spell_suggest,
+			desc = "Search string"
+		},
+		{
 			"<leader>h",
 			require("telescope.builtin").help_tags,
 			desc = "Help"
@@ -223,6 +228,65 @@ function M.setup_telescope_keymaps()
 			require("telescope.builtin").git_bcommits,
 			desc = "git parent commits"
 		},
+	}
+end
+
+function M.setup_dap_keymaps()
+	local dap = require("dap")
+	return {
+		{
+			"<leader>db",
+			dap.toggle_breakpoint,
+			desc = "Debug: Toggle breakpoint"
+		},
+		{
+			"<leader>dc",
+			dap.run_to_cursor,
+			desc = "Debug: Run to cursor"
+		},
+		{
+			"<leader>dh",
+			function()
+				require("dapui").eval(nil, { enter = true })
+			end,
+			desc = "Debug: Under cursor"
+		},
+		{
+			"<F1>",
+			dap.continue,
+			desc = "Debug: Continue"
+		},
+		{
+			"<F2>",
+			dap.step_into,
+			desc = "Debug: Step info"
+		},
+		{
+			"<F3>",
+			dap.step_over,
+			desc = "Debug: Step over"
+		},
+		{
+			"<F4>",
+			dap.step_out,
+			desc = "Debug: Step out"
+		},
+		{
+			"<F5>",
+			dap.step_back,
+			desc = "Debug: Step back"
+		},
+		{
+			"<F11>",
+			dap.restart,
+			desc = "Debug: Restart"
+		},
+		{
+			"<F12>",
+			dap.terminate,
+			desc = "Debug: Terminate"
+		},
+
 	}
 end
 
