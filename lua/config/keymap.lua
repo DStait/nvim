@@ -343,12 +343,12 @@ function M.setup_trouble_keymaps()
 		},
 		{
 			"<leader>cs",
-			"<cmd>Trouble symbols toggle focus=false<cr>",
+			"<cmd>Trouble symbols toggle focus=false win.size=80 win.type=split<cr>",
 			desc = "Symbols",
 		},
 		{
 			"<leader>cl",
-			"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+			"<cmd>Trouble lsp toggle focus=false win.position=right win.type=split win.size=80<cr>",
 			desc = "LSP Definitions / references / ... "
 		},
 		{
