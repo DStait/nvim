@@ -239,6 +239,12 @@ function M.setup_telescope_keymaps()
 			require("telescope.builtin").git_bcommits,
 			desc = "git parent commits"
 		},
+		{
+			"<leader>F",
+			require("telescope.builtin").filetypes,
+			desc = "Filetype"
+		},
+
 	}
 end
 
