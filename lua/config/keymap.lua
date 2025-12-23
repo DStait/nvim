@@ -156,6 +156,17 @@ function M.setup_oil_keymaps()
 	}
 end
 
+function M.setup_url_open_keymaps()
+	return {
+		{
+			"<leader>B",
+			"<esc>:URLOpenUnderCursor<cr>",
+			mode = { "n" },
+			desc = "Open link"
+		}
+	}
+end
+
 function M.setup_browser_keymaps()
 	return {
 		{

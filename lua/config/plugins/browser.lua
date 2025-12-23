@@ -18,7 +18,7 @@ return {
 
 			-- Configuration for importing bookmarks from web browsers.
 			browser_bookmarks = {
-				enabled = false,
+				enabled = true,
 				browsers = {
 					chrome = false,
 					firefox = true,
