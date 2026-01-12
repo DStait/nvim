@@ -26,3 +26,10 @@ for _, ls in ipairs(language_servers) do
 	})
 end
 require('ufo').setup()
+
+
+vim.api.nvim_create_user_command("LspLogClear", function()
+	local lsplogpath = vim.fn.stdpath("state") .. "/lsp.log"
+	print(lsplogpath)
+	if io.close(io.open(lsplogpath, "w+b")) == false then vim.notify("Clearning LSP Log failed.", vim.log.levels.WARN) end
+end, { nargs = 0 })
