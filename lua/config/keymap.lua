@@ -24,6 +24,13 @@ function M.setup_neotest_keymaps()
 			desc = "Attach",
 		},
 		{
+			"<leader>tS",
+			function()
+				require("neotest").run.stop()
+			end,
+			desc = "Run File",
+		},
+		{
 			"<leader>tf",
 			function()
 				require("neotest").run.run(vim.fn.expand("%"))
@@ -94,9 +101,16 @@ function M.setup_neotest_keymaps()
 			desc = "Watch",
 		},
 		{
+			"<leader>tD",
+			function()
+				require("neotest").run.run({ strategy = "dap" })
+			end,
+			desc = "Run with Debug",
+		},
+		{
 			"<leader>td",
 			function()
-				vim.cmd("Neotree close")
+				--vim.cmd("Neotree close")
 				require("neotest").summary.close()
 				require("neotest").output_panel.close()
 				require("neotest").run.run({ suite = false, strategy = "dap" })
