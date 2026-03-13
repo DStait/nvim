@@ -207,6 +207,13 @@ function M.setup_telescope_keymaps()
 			desc = "Find Files"
 		},
 		{
+			"<leader>@",
+			function()
+				require("telescope.builtin").find_files({ no_ignore = true })
+			end,
+			desc = "Find Files"
+		},
+		{
 			"<leader>i",
 			require("telescope.builtin").diagnostics,
 			desc = "Code Issues"
