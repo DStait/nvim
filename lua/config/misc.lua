@@ -33,3 +33,8 @@ vim.api.nvim_create_user_command("LspLogClear", function()
 	print(lsplogpath)
 	if io.close(io.open(lsplogpath, "w+b")) == false then vim.notify("Clearning LSP Log failed.", vim.log.levels.WARN) end
 end, { nargs = 0 })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = { '*' },
+	command = ":%s/\\s\\+$//e"
+})
